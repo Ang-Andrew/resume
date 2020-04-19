@@ -1,6 +1,8 @@
 name: Resume CI
 on:
   push:
+    tags:
+       - 'v*'
 
 jobs:
   build:
