@@ -1,0 +1,20 @@
+name: Resume CI
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Git repository
+        uses: actions/checkout@v1
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@master
+        with:
+          root_file: Andrew_Ang_CV.tex
+      - name: Upload CV artifact
+        uses: actions/upload-artifact@v1
+        with:
+          name: Andrew_Ang_CV.pdf
+          path: ./Andrew_Ang_CV.pdf
+      
