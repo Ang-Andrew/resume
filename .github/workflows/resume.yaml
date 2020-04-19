@@ -1,8 +1,7 @@
 name: Resume CI
 on:
   push:
-    tags:
-      - 'v*'
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,6 +29,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./resume.pdf
-          asset_name: resume.pdf
+          asset_path: ./Andrew_Ang_CV.pdf
+          asset_name: Andrew_Ang_CV.pdf
           asset_content_type: application/pdf
