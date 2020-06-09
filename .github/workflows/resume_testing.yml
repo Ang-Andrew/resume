@@ -13,7 +13,7 @@ jobs:
         with:
           root_file: Andrew_Ang_CV.tex
       - name: Upload CV artifact
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: ${{ github.sha }}
           path: ./Andrew_Ang_CV.pdf
