@@ -1,164 +1,153 @@
 % LaTeX resume using res.cls
-\documentclass[3pt]{res}
-%\usepackage{helvetica} % uses helvetica postscript font (download helvetica.sty)
-%\usepackage{newcent}   % uses new century schoolbook postscript font  
-\setlength{\topmargin}{-0.6in}  % Start text higher on the page 
+\documentclass{res}
+\usepackage[margin=1.25in]{geometry}
+\setlength{\topmargin}{-0.6in}  % Start text higher on the page
 \setlength{\textheight}{9.8in}  % increase textheight to fit more on a page
 \setlength{\headsep}{0.2in}     % space between header and text
 \setlength{\headheight}{12pt}   % make room for header
 \usepackage{fancyhdr}  % use fancyhdr package to get 2-line header
 \renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
 \lhead{\hspace*{-\sectionwidth}Andrew Ang} % force lhead all the way left
-%\rhead{Page \thepage}  % put page number at right
 \cfoot{}  % the footer is empty
 \pagestyle{fancy} % set pagestyle for the document
 \usepackage{blindtext}
 \usepackage{enumitem}
 \usepackage{cite}
-\begin{document} 
+\begin{document}
 \thispagestyle{empty} % this page does not have a header
-\name{Andrew Ang}
-\address{46 Furlong Crescent\\
-Churton Park, Wellington 6037\\
-+64 0210705328\\
-andrewang321@gmail.com}
-
+\name{Andrew Ang\\{\centering andrewang321@gmail.com}}
 
 \begin{resume}
 
+\section{PROFESSIONAL PROFILE}
+\vspace{0.1in}
+  Highly skilled electronic engineer with extensive experience in areas of 
+  FPGA design, embedded programming, high-speed PCB design, Linux OS, 
+  microcontroller development and recently, Linux drivers. 
+  Consistently successful by being innovative, self-driven and determined.
+
+\section{EMPLOYMENT}
+\vspace{0.1in}
+  {\bf FPGA Design Engineer at Arista Networks (2019 - Present)}
+    \begin{itemize}[noitemsep]
+      \item Xilinx UltraScale+ FPGA development for low-latency solutions
+      \item HDL testbenches development for verification of designs
+      \item Debugging designs on hardware using ILA
+      \item Timing closure
+      \item Preparing documentation
+    \end{itemize}
+  {\bf Junior Hardware Design Engineer at Dosec Designs (2018)}
+    \begin{itemize}[noitemsep]
+      \item PCB development (Altium)
+      \item Microcontroller development (MSP430, PSoC, ARM Cortex-M0+)
+      \item Building and deploying Linux solutions
+      \item Windows GUI development (C++, Visual Basic, .NET)
+      \item Preparing Engineering Design Specifications (EDS) for clients
+    \end{itemize}
+  {\bf Summer Research Assistant at Victoria University of Wellington (2016/2017)}
+    \begin{itemize}[noitemsep]
+      \item Proof of concept development of a PXI express system
+      \item Implemented FPGA/SoC technology (VHDL/Verilog, C)
+      \item Gained experience in Linux kernel architecture and developing device drivers for PCI Express.
+    \end{itemize}
+  {\bf Research and Development Summer Intern for ikeGPS (2015/2016)}
+    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
+      \item Research and development of automated laser measurement tools
+      \item Daily communication with CTO about daily progress
+    \end{itemize}
+
 \section{EDUCATION}
-\vspace{0.1in} 
-	 
-     2013 - 2016 Victoria University of Wellington
-    	\begin{itemize} % Use \item[] to prevent a bullet from appearing
-      \item[] BE(Hons) Electronics and Computer System Engineering Honours
-      \end{itemize}
-     
-     2017 - 2018 Victoria University of Wellington
-     	\begin{itemize}
-     	\item Master of Engineering (ME) Student
-     	\end{itemize}
- 
-\section{SKILLS} 
 \vspace{0.1in}
-  {\bf Leadership}
-    \begin{itemize} % Use \item[] to prevent a bullet from appearing
-      \item[] ·	In group projects, I strive for a leadership role as it provides an opportunity to develop a relationship with team members and clients, while also solving engineering solutions. Striving for the role of project leader have led me to accomplish successful projects. In addition, I have gained excellent interpersonal, management and leadership skills by applying myself as a team leader. I am able to take responsibility and lead a wide range of projects with full accountability.
-      \end{itemize}
 
-{\bf Strategy and Project Management} 
-       \begin{itemize}
-        \item[] ·	Various projects I have encountered requires high-level problem solving and decision making. Combined with experiences gained from both academia and personal projects, it allows me to implement appropriate strategies to fit the situation. Examples of these situations consists of project requirements and restrictions, team member disputes and unforeseen project events that require mitigation. As a practical person, I learn best from hands-on experiences. The experiences I have gained will definitely play a crucial role in future team projects.
+  2017 - 2018 Victoria University of Wellington
+  \begin{itemize}
+    \item Master of Engineering (ME) with Distinction
+  \end{itemize}
+
+  2013 - 2016 Victoria University of Wellington
+  \begin{itemize} % Use \item[] to prevent a bullet from appearing
+    \item BE(Hons) Electronics and Computer System Engineering Honours
+  \end{itemize}
+
+\section{TECHNICAL EXPERTISE}
+  {\bf Hardware}
+    \begin{itemize}[noitemsep]
+      %\item Embedded Controllers (AVR,ARM)
+      \item FPGA Development (Xilinx)
+      \item Linux (Kernel Development, Device Drivers)
+      \item PCB Design (multi-layered, high-speed)
+      \item Microcontroller firmware development (MSP430, PSoC)
     \end{itemize}
 
-  {\bf Communication} 
-        \begin{itemize}
-        \item[] Communication is an important medium that allows the exchange of ideas and solutions. I believe that communication is essential for any areas of employment, particularly in engineering consultation due to meeting demands and specifications. I posses both excellent verbal and written communication skills gained from experiences at University and during employment. I use my communication skills to facilitate discussions between team members in projects, provide performance feed back to individuals and provide an effective presentation of complex material, to audiences of varying skills.
-       \end{itemize}
+  \newpage
 
-   
- 
-\section{PROJECTS} 
-\vspace{0.1in} 
- More projects can be found on my GitHub page: \textit{https://github.com/goli12}  \\
- \\
-   {\bf Embedded Zynq FPGA/SoC Development}
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Developed a Linux solution and device drivers on Zynq Mini-ITX host to communicate with a PCI Express endpoint (ZC706)
-      \item Implemented a PCI Express engine on FPGA to facilitate data transfer from/to Mini-ITX host
-      \item Implemented a DMA engine to allow data transfers from PCI Express to endpoint's DDR2 memory
-      \end{itemize} 
- 
- {\bf Switch Mode Power Supply}
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Powered from a 12V DC source, can be extended to be powered from mains
-      \item Simulation will be done in LTSpice
-      \item Prototype on breadboard, with final implementation on a PCB designed in Altium
-      \end{itemize}
-      
-	{\bf WaiNZ Water Quality Monitor}
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Developed water quality monitor which measures pH, temperature and salinity 
-      \item Developed Bluetooth communications interface with an Android phone application  
-      \end{itemize}      
-      
-      
+  {\bf Software}
+    \begin{itemize}[noitemsep]
+      \item Xilinx Vivado and Simulator
+      \item Altium PCB designer
+      \item Solidworks CAD design
+      \item Matlab
+    \end{itemize}
 
+  {\bf Languages}
+    \begin{itemize}[noitemsep]
+      \item VHDL/Verilog
+      \item C
+      \item Scripting languages (Bash, Tcl, Javascript, Powershell, Python)
+      \item Makefile
+    \end{itemize}
 
-      
-\section{EMPLOYMENT} 
+  {\bf Other}
+    \begin{itemize}[noitemsep]
+      \item Version control (git, SVN)
+      \item Continuous Integration (Bamboo)
+      \item Project Tracking (Jira)
+      \item \LaTeX
+    \end{itemize}
+
+\section{PERSONAL PROJECTS}
 \vspace{0.1in}
-	 {\bf Summer Research Assistant at Victoria University of Wellington} 
-    \begin{itemize}[noitemsep]
-    	\item Proof of concept development of a PXI express system
-    	\item Implemented FPGA/SoC technology (VHDL/Verilog, HLS and C programming languages used)
-    	\item Gained experience in Linux kernel architecture and developing device drivers for PCI Express.
-    \end{itemize} 
-    {\bf ·	Research and Development Summer Intern for ikeGPS 2015/2016} 
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Research and development of measurement tools
-      \item Implemented scrum in project management
-      \item Daily communication with CTO about progress
-      \item Programming languages used:
-      \begin{itemize}
-	    \item Python
-	    \item Java
-	    \item Javascript/NodeJS
-	  \end{itemize}
-      \end{itemize}
-    {\bf Educational Consultant for Inspiration Education 2014 - 2016} 
-    \begin{itemize}[noitemsep]
-    	\item Tutor for NCEA physics and mathematics
-    \end{itemize}
-     {\bf Cleaner for Hossay Properties Services Limited 2014 - Present} 
-   
-      
- 
-\section{TECHNICAL EXPERTISE} 
-{\bf Hardware} 
-    \begin{itemize}[noitemsep]
-    	%\item Embedded Controllers (AVR,ARM)
-    	\item FPGA (Xilinx)
-    	\item Linux (Kernel Development, Device Drivers) 
-    	\item PCB Design (multi-layered, high-speed)
-    	\item High-speed design (PCI Express)
-    \end{itemize}
- {\bf Software} 
-    \begin{itemize}[noitemsep]
-    	\item Solidworks CAD design
-    	\item Altium PCB designer
-    	\item Matlab
-    	\item Xilinx toolset (Vivado, SDK, HLS, Petalinux) 
-    \end{itemize}
-{\bf Languages} 
-    \begin{itemize}[noitemsep]
-    	\item C/C++
-    	\item VHDL/Verilog
-    	\item Scripting languages (Bash, Tcl, Javascript, Powershell, Python)
-    	\item Java
-    \end{itemize}
-    
-{\bf Other} 
-    \begin{itemize}[noitemsep]
-     	\item Networking technology
-    	\item Proficient in using github and bitbucket
-    	\item \LaTeX
+  
+  {\bf Pipelined MIPS Processor Verilog Core (ongoing)}
+  \begin{itemize}
+    \item Currently implementing hazard detection and solving
+    \item Targeting low-end Xilinx FPGA devices (Spartan 7,Artix)
+    \item Future goal is to include a hardware MMU for Linux page table management
+  \end{itemize}
+
+  {\bf Advanced Encryption Standard (AES) 128-bit Key Encryption VHDL Core}
+    \begin{itemize}
+      \item 300 MHz target clock speed
+      \item Pynq-Z1 target board (Zynq 7020)
     \end{itemize}
 
-\section{HONOURS and PUBLICATIONS} 
+  {\bf Embedded Zynq FPGA/SoC Development}
+    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
+      \item Developed a Linux solution and device drivers on Zynq Mini-ITX 
+      host to communicate with a PCI Express endpoint (ZC706)
+      \item Implemented a PCI Express engine on FPGA to facilitate data transfer 
+            from/to Mini-ITX host
+      \item Implemented a DMA engine to allow data transfers from PCI Express 
+            to endpoint's DDR2 memory
+    \end{itemize}
+
+ {\bf Open PXIe System Based on FPGA Modules}
+    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
+      \item Continuation from Master's thesis
+      \item Functional System Controller and Peripheral Module in National Instrument's PXIe-1082 chassis
+      \item Next step: development of an Open PXIe chassis to replace NI's PXIe-1082
+    \end{itemize}
+
+\section{HONOURS and PUBLICATIONS}
 \begin{itemize}[noitemsep]
-		\item Paper accepted into \textit{16$^{th}$ International Conference on Field-Programmable Technology 2017, Melbourne}
-		\item Paper accepted into the \textit{11$^{th}$ International Conference on Sensing Technology 2017, Sydney}
-		\item 2017 Postgraduate Scholarship Recipient
-		\item Summer Research Scholar 2016-2017
-    	\item Included on Dean's List 2012 for academic excellence
-    \end{itemize}
-%\section{REFERENCES}
-% {\bf Available upon request} 
-\end{resume}
-%\bibliographystyle{acm}
-%\bibliography{mybib}
+  \item Paper accepted into \textit{16$^{th}$ International Conference on Field-Programmable Technology 2017, Melbourne}
+  \item Paper accepted into the \textit{11$^{th}$ International Conference on Sensing Technology 2017, Sydney}
+  \item 2017 Postgraduate Scholarship Recipient
+  \item Summer Research Scholar 2016-2017
+  \item Included on Dean's List 2012 for academic excellence
+  \end{itemize}
 
+\end{resume}
 \end{document}
 
 
