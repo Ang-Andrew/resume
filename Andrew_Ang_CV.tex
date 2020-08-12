@@ -1,181 +1,96 @@
-% LaTeX resume using res.cls
-\documentclass{res}
-\usepackage[margin=1.25in]{geometry}
-\setlength{\topmargin}{-0.6in}  % Start text higher on the page
-\setlength{\textheight}{9.8in}  % increase textheight to fit more on a page
-\setlength{\headsep}{0.2in}     % space between header and text
-\setlength{\headheight}{12pt}   % make room for header
-\usepackage{fancyhdr}  % use fancyhdr package to get 2-line header
-\renewcommand{\headrulewidth}{0pt} % suppress line drawn by default by fancyhdr
-\lhead{\hspace*{-\sectionwidth}Andrew Ang} % force lhead all the way left
-\cfoot{}  % the footer is empty
-\pagestyle{fancy} % set pagestyle for the document
-\usepackage{blindtext}
-\usepackage{enumitem}
-\usepackage{cite}
+\documentclass{mycv}
+
+\name[Andrew Ang]{Andrew Ang}
+\email{andrewang321@gmail.com}
+\github{Ang-Andrew}
+\linkedin{andrewang1}
+
+\addbibresource{publications.bib}
+
 \begin{document}
-\thispagestyle{empty} % this page does not have a header
-\name{Andrew Ang\\{\centering andrewang321@gmail.com}}
 
-\begin{resume}
+\maketitle%
 
-\section{PROFESSIONAL PROFILE}
-\vspace{0.1in}
-  Highly skilled electronic engineer with extensive experience in areas of 
-  FPGA design, embedded programming, high-speed PCB design, Linux OS, 
-  microcontroller development and recently, Linux drivers. 
-  Consistently successful by being innovative, self-driven and determined.
+\section{Professional \\ Profile}
 
-\section{EMPLOYMENT}
-\vspace{0.1in}
-  {\bf FPGA Design Engineer at Arista Networks (2019 - Present)}
-    \begin{itemize}[noitemsep]
-      \item Xilinx UltraScale+ FPGA development for low-latency solutions
-      \item HDL testbenches development for verification of designs
-      \item Debugging designs on hardware using ILA
-      \item Timing closure
-      \item Preparing documentation
-    \end{itemize}
-  {\bf Junior Hardware Design Engineer at Dosec Designs (2018)}
-    \begin{itemize}[noitemsep]
-      \item PCB development (Altium)
-      \item Microcontroller development (MSP430, PSoC, ARM Cortex-M0+)
-      \item Building and deploying Linux solutions
-      \item Windows GUI development (C++, Visual Basic, .NET)
-      \item Preparing Engineering Design Specifications (EDS) for clients
-    \end{itemize}
-  {\bf Summer Research Assistant at Victoria University of Wellington (2016/2017)}
-    \begin{itemize}[noitemsep]
-      \item Proof of concept development of a PXI express system
-      \item Implemented FPGA/SoC technology (VHDL/Verilog, C)
-      \item Gained experience in Linux kernel architecture and developing device drivers for PCI Express.
-    \end{itemize}
-  {\bf Research and Development Summer Intern for ikeGPS (2015/2016)}
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Research and development of automated laser measurement tools
-      \item Daily communication with CTO about daily progress
-    \end{itemize}
+Highly skilled electronic engineer with extensive experience in areas of FPGA design, embedded development and high-speed PCB design. 
+Consistently successful by being innovative, self-driven and determined.
 
-\section{EDUCATION}
-\vspace{0.1in}
+\section{Professional \\ Experience}
 
-  2017 - 2018 Victoria University of Wellington
-  \begin{itemize}
-    \item Master of Engineering (ME) with Distinction
-  \end{itemize}
+\subsection{Arista Networks}[Sydney, NSW, Australia]
+\begin{positions}
+  \entry{FPGA Design Engineer}{Jan 2019~--~Present}
+\end{positions}
 
-  2013 - 2016 Victoria University of Wellington
-  \begin{itemize} % Use \item[] to prevent a bullet from appearing
-    \item BE(Hons) Electronics and Computer System Engineering Honours
-  \end{itemize}
-
-\section{TECHNICAL EXPERTISE}
-  {\bf Hardware}
-    \begin{itemize}[noitemsep]
-      %\item Embedded Controllers (AVR,ARM)
-      \item FPGA Development (Xilinx)
-      \item Linux (Kernel Development, Device Drivers)
-      \item PCB Design (multi-layered, high-speed)
-      \item Microcontroller firmware development (MSP430, PSoC)
-    \end{itemize}
-
-  \newpage
-
-  {\bf Software}
-    \begin{itemize}[noitemsep]
-      \item Xilinx Vivado and Simulator
-      \item Altium PCB designer
-      \item Solidworks CAD design
-      \item Matlab
-    \end{itemize}
-
-  {\bf Languages}
-    \begin{itemize}[noitemsep]
-      \item VHDL/Verilog
-      \item C
-      \item Scripting languages (Bash, Tcl, Javascript, Powershell, Python)
-      \item Makefile
-    \end{itemize}
-
-  {\bf Other}
-    \begin{itemize}[noitemsep]
-      \item Version control (git, SVN)
-      \item Continuous Integration (Bamboo)
-      \item Project Tracking (Jira)
-      \item \LaTeX
-    \end{itemize}
-
-\section{PERSONAL PROJECTS}
-\vspace{0.1in}
-  
-  {\bf Pipelined MIPS Processor Verilog Core (ongoing)}
-  \begin{itemize}
-    \item Currently implementing hazard detection and solving
-    \item Targeting low-end Xilinx FPGA devices (Spartan 7,Artix)
-    \item Future goal is to include a hardware MMU for Linux page table management
-  \end{itemize}
-
-  {\bf Advanced Encryption Standard (AES) 128-bit Key Encryption VHDL Core}
-    \begin{itemize}
-      \item 300 MHz target clock speed
-      \item Pynq-Z1 target board (Zynq 7020)
-    \end{itemize}
-
-  {\bf Embedded Zynq FPGA/SoC Development}
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Developed a Linux solution and device drivers on Zynq Mini-ITX 
-      host to communicate with a PCI Express endpoint (ZC706)
-      \item Implemented a PCI Express engine on FPGA to facilitate data transfer 
-            from/to Mini-ITX host
-      \item Implemented a DMA engine to allow data transfers from PCI Express 
-            to endpoint's DDR2 memory
-    \end{itemize}
-
- {\bf Open PXIe System Based on FPGA Modules}
-    \begin{itemize}[noitemsep] % Use \item[] to prevent a bullet from appearing
-      \item Continuation from Master's thesis
-      \item Functional System Controller and Peripheral Module in National Instrument's PXIe-1082 chassis
-      \item Next step: development of an Open PXIe chassis to replace NI's PXIe-1082
-    \end{itemize}
-
-\section{HONOURS and PUBLICATIONS}
 \begin{itemize}[noitemsep]
-  \item Paper accepted into \textit{16$^{th}$ International Conference on Field-Programmable Technology 2017, Melbourne}
-  \item Paper accepted into the \textit{11$^{th}$ International Conference on Sensing Technology 2017, Sydney}
-  \item 2017 Postgraduate Scholarship Recipient
-  \item Summer Research Scholar 2016-2017
-  \item Included on Dean's List 2012 for academic excellence
-  \end{itemize}
+  \item Xilinx UltraScale+ FPGA development for Ethernet (10G/1G) low-latency solutions
+  \item HDL testbenches development for verification of applications and modules
+  \item Debugging designs on hardware using ILA
+  \item Timing closure
+  \item Preparing documentation
+\end{itemize}
 
-\end{resume}
+\subsection{Dosec Designs}[Sydney, NSW, Australia]
+\begin{positions}
+  \entry{Junior Hardware Design Engineer}{Mar 2018~--~Jan 2019}
+\end{positions}
+
+\begin{itemize}[noitemsep]
+  \item PCB development (Altium)
+  \item Microcontroller development (MSP430, PSoC)
+  \item Building and deploying Linux solutions
+  \item Windows GUI development (C++, Visual Basic, .NET)
+  \item Preparing Engineering Design Specifications (EDS) for clients
+\end{itemize}
+
+\subsection{Victoria University of Wellington}[Wellington, New Zealand]
+\begin{positions}
+  \entry{Summer Research Assistant at Victoria University of Wellington}{Nov 2016~--~Feb 2017}
+\end{positions}
+
+\begin{itemize}[noitemsep]
+  \item Proof of concept development of a PXI express system
+  \item Implemented FPGA/SoC technology (VHDL/Verilog, C)
+  \item Gained experience in Linux kernel development including developing device drivers for PCI Express endpoint devices.
+\end{itemize}
+
+\subsection{ikeGPS}[Wellington, New Zealand]
+\begin{positions}
+  \entry{Research and Development Summer Intern for ikeGPS}{Nov 2015~--~Feb 2016}
+\end{positions}
+
+\begin{itemize}[noitemsep]
+  \item Research and development of automated laser measurement tools
+  \item Daily communication with CTO about daily progress
+\end{itemize}
+
+\section{Education}
+
+\subsection{Victoria University of Wellington}[Wellington, New Zealand]
+\vspace{-\parskip}%
+\begin{itemize}[label={}]
+  \item Master of Engineering (ME) with Distinction \printdate{Feb 2017~--~Mar 2018}
+  \item Dissertation: \href{https://tewaharoa.victoria.ac.nz/discovery/fulldisplay?docid=alma99178858497202386&context=L&vid=64VUW_INST:VUWNUI&search_scope=MyInst_and_CI&tab=all&lang=en}{Development of an Open PXIe System based on FPGA Modules}
+  \item Advisor: \href{https://people.wgtn.ac.nz/robin.dykstra}{Dr. Robin Dykstra}
+\end{itemize}
+
+\subsection{Victoria University of Wellington}[Wellington, New Zealand]
+\vspace{-\parskip}%
+\begin{itemize}[label={}]
+  \item BE(Hons) Electronics and Computer System Engineering Honours \printdate{2013~--~2016}
+\end{itemize}
+
+\section{Skills}
+
+\begin{description}
+  \item[Programming] Verilog, VHDL, Python, C, Tcl
+  \item[Tools] Vivado, Altium Desiginer
+  \item[Project Mangement] Git, Continous Integration/Deployment
+\end{description}
+
+\section{Publications}%
+
+\publications{publications.bib}
+
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
