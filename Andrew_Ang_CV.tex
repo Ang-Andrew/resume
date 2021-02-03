@@ -9,6 +9,10 @@
 
 \begin{document}
 
+\newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt} \item[-] #1}
+}
+
 \maketitle%
 
 \section{Professional \\ Profile}
@@ -24,11 +28,13 @@ Consistently successful by being innovative, self-driven and determined.
 \end{positions}
 
 \begin{itemize}[noitemsep]
-  \item Xilinx UltraScale+ FPGA development for Ethernet (10G/1G) low-latency solutions
-  \item HDL testbenches development for verification of applications and modules
-  \item Debugging designs on hardware using ILA
-  \item Timing closure
-  \item Preparing documentation
+  \item Delivered mutiple key FPGA solutions for low-latency network applications for \href{https://www.arista.com/en/products/7130-network-applications-quick-look}{Arista's 7130 devices}
+    \SubItem{\href{https://www.arista.com/assets/data/pdf/ProductBrief-MetaProtect-Firewall.pdf}{MetaProtect} : 135 ns packet filtering}
+    \SubItem{\href{https://www.arista.com/assets/data/pdf/ProductBrief-SwitchApp.pdf}{SwitchApp} : 480 Gbps layer 2 switching latency as low as 92 ns}
+    \SubItem{Multiple SLR designs with strict timing requirements}
+  \item Developed wide-coverage, internal FPGA testbenches for regression testing in both simulation and in hardware
+  \item Owned customer support engagements and relaying fast turn-around solutions.
+  \item Led live APAC customer workshops for Arista 7130 FPGA development
 \end{itemize}
 
 \subsection{Dosec Designs}[Sydney, NSW, Australia]
@@ -37,11 +43,12 @@ Consistently successful by being innovative, self-driven and determined.
 \end{positions}
 
 \begin{itemize}[noitemsep]
-  \item PCB development (Altium)
-  \item Microcontroller development (MSP430, PSoC)
-  \item Building and deploying Linux solutions
-  \item Windows GUI development (C++, Visual Basic, .NET)
-  \item Preparing Engineering Design Specifications (EDS) for clients
+  \item Electronic development of critical sub-system components to address robust IoT sensor solutions
+  \SubItem{PCB development (Altium)}
+  \SubItem{Microcontroller development (MSP430, PSoC)}
+  \SubItem{Building and deploying Linux solutions}
+  \SubItem{Windows GUI development (C++, Visual Basic, .NET)}
+  \SubItem{Preparing Engineering Design Specifications (EDS) for clients}
 \end{itemize}
 
 \subsection{Victoria University of Wellington}[Wellington, New Zealand]
@@ -50,19 +57,8 @@ Consistently successful by being innovative, self-driven and determined.
 \end{positions}
 
 \begin{itemize}[noitemsep]
-  \item Proof of concept development of a PXI express system
-  \item Implemented FPGA/SoC technology (VHDL/Verilog, C)
+  \item Proof of concept development of a system for Magnetic Resonance Imaging (MRI) using FPGA solutions
   \item Gained experience in Linux kernel development including developing device drivers for PCI Express endpoint devices.
-\end{itemize}
-
-\subsection{ikeGPS}[Wellington, New Zealand]
-\begin{positions}
-  \entry{Research and Development Summer Intern for ikeGPS}{Nov 2015~--~Feb 2016}
-\end{positions}
-
-\begin{itemize}[noitemsep]
-  \item Research and development of automated laser measurement tools
-  \item Daily communication with CTO about daily progress
 \end{itemize}
 
 \section{Education}
@@ -84,9 +80,9 @@ Consistently successful by being innovative, self-driven and determined.
 \section{Skills}
 
 \begin{description}
-  \item[Programming] Verilog, VHDL, Python, C, Tcl
+  \item[Programming] VHDL, Verilog, Python, C, Tcl
   \item[Tools] Vivado, Altium Desiginer
-  \item[Project Mangement] Git, Continous Integration/Deployment
+  \item[Project Mangement] Git, Continous Integration/Deployment, Attlasian Development and Colloboration Tools
 \end{description}
 
 \section{Publications}%
